@@ -117,3 +117,17 @@ section#contact p {
   color: #333;
 }
 
+/* ------------------ Project Hover Effects ------------------ */
+section#projects li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+section#projects li:hover {
+  background: rgba(0, 123, 255, 0.1); /* light blue highlight */
+  transform: translateY(-3px);        /* subtle lift */
+}
