@@ -61,18 +61,19 @@ section#about p {
 
 /* ------------------ Projects Section ------------------ */
 section#projects {
-  background-color: #fff;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 2.5rem 3rem;
   max-width: 800px;
   margin: 2rem auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 section#projects h2 {
-  text-align: center;
-  color: #007bff;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
 }
 
 section#projects ul {
@@ -85,25 +86,34 @@ section#projects li {
   font-size: 1.1rem;
 }
 
+/* Optional: hover effect for project links */
+section#projects a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
 /* ------------------ Contact Section ------------------ */
 section#contact {
-  background-color: #fff;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 2.5rem 3rem;
   max-width: 800px;
   margin: 2rem auto 3rem auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 section#contact h2 {
-  text-align: center;
-  color: #007bff;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
 }
 
 section#contact p {
-  text-align: center;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
 }
 
