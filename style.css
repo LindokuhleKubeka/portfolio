@@ -1,0 +1,36 @@
+/* Reset some default spacing and set font */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Header Styles */
+header {
+  background-color: #333;      /* dark background */
+  color: #fff;                 /* white text */
+  padding: 1rem;               /* space inside header */
+  text-align: center;          /* center the content */
+}
+
+/* Navigation links */
+header nav a {
+  margin: 0 15px;              /* space between links */
+  color: #fff;                 /* white text */
+  font-weight: bold;           /* make links stand out */
+}
+
+header nav a:hover {
+  color: #ffcc00;              /* hover effect */
+}
