@@ -1,4 +1,4 @@
-/* Reset some default spacing and set font */
+/* ------------------ Global Styles ------------------ */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -16,21 +16,94 @@ a {
 a:hover {
   text-decoration: underline;
 }
-/* Header Styles */
+
+/* ------------------ Header & Navigation ------------------ */
 header {
-  background-color: #333;      /* dark background */
-  color: #fff;                 /* white text */
-  padding: 1rem;               /* space inside header */
-  text-align: center;          /* center the content */
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Navigation links */
 header nav a {
-  margin: 0 15px;              /* space between links */
-  color: #fff;                 /* white text */
-  font-weight: bold;           /* make links stand out */
+  margin: 0 15px;
+  color: #fff;
+  font-weight: bold;
 }
 
 header nav a:hover {
-  color: #ffcc00;              /* hover effect */
+  color: #ffcc00;
 }
+
+/* ------------------ About Me Section ------------------ */
+section#about {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border-radius: 10px;
+  padding: 2.5rem 3rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+section#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-align: center;
+}
+
+section#about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* ------------------ Projects Section ------------------ */
+section#projects {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section#projects h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+section#projects ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+section#projects li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ------------------ Contact Section ------------------ */
+section#contact {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto 3rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section#contact h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+section#contact p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
