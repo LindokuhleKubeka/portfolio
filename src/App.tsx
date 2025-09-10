@@ -1,24 +1,32 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import "./index.css";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [projects, setProjects] = useState<any[]>([]);
 
-  // Load saved preference from localStorage
+  // Load dark mode preference
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
     if (saved) setDarkMode(saved === "true");
   }, []);
 
-  // Update <html> class based on darkMode state
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    if (darkMode) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
     localStorage.setItem("darkMode", darkMode.toString());
   }, [darkMode]);
+
+  // Fetch GitHub projects
+  useEffect(() => {
+    axios
+      .get("https://api.github.com/users/LindokuhleKubeka/repos")
+      .then((res) => {
+        setProjects(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -43,11 +51,26 @@ export default function App() {
           {darkMode ? "Light Mode" : "Dark Mode"}
         </button>
       </header>
-      <main className="max-w-4xl mx-auto p-6">
-        <p className="text-gray-700 dark:text-gray-300">
-          Portfolio projects coming soon...
-        </p>
+
+      <main className="max-w-5xl mx-auto p-6">
+        <h2 className="text-2xl font-semibold mb-4">GitHub Projects</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projects.map((proj) => (
+            <a
+              key={proj.id}
+              href={proj.html_url}
+              target="_blank"
+              className="p-4 border rounded hover:shadow-lg transition bg-white dark:bg-gray-800"
+            >
+              <h3 className="text-lg font-bold mb-1">{proj.name}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                {proj.description || "No description"}
+              </p>
+            </a>
+          ))}
+        </div>
       </main>
     </div>
   );
 }
+
