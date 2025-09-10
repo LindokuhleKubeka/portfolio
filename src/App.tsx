@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <header className="max-w-4xl mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-2">Lindokuhle Kubeka</h1>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Final-year Software Engineering student • Java, Python, Cloud & DevOps
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        <a
+          href="/LindokuhleKubeka_CV.pdf"
+          download
+          className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        >
+          Download CV
+        </a>
+      </header>
+      <main className="max-w-4xl mx-auto p-6">
+        <p className="text-gray-700 dark:text-gray-300">
+          Portfolio projects coming soon...
+        </p>
+      </main>
+    </div>
+  );
 }
 
-export default App
