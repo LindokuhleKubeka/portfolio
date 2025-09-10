@@ -26,12 +26,36 @@ export default function App() {
       .then((res) => {
         // Sort by most recently updated
         const sorted = res.data.sort(
-          (a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+          (a: any, b: any) =>
+            new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
         );
         setProjects(sorted);
       })
       .catch((err) => console.error(err));
   }, []);
+
+  // WethinkCode private projects placeholders
+  const privateProjects = [
+    {
+      id: "wtc-01",
+      name: "Robot World Simulation",
+      description:
+        "Final-year WethinkCode project: Robot commands simulation using Java.",
+      tools: ["Java", "OOP", "APIs"],
+    },
+    {
+      id: "wtc-02",
+      name: "Brewery Database",
+      description: "Java project demonstrating SQL & ORM integration.",
+      tools: ["Java", "SQL", "ORM"],
+    },
+    {
+      id: "wtc-03",
+      name: "DevOps CI/CD Pipeline",
+      description: "CI/CD project with Docker, Kubernetes & GitHub Actions.",
+      tools: ["Docker", "Kubernetes", "GitHub Actions"],
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
@@ -60,7 +84,7 @@ export default function App() {
 
       {/* Main content */}
       <main className="max-w-5xl mx-auto p-6">
-        {/* Featured Projects */}
+        {/* Featured GitHub Projects */}
         <h2 className="text-2xl font-semibold mb-4">Featured Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {projects.slice(0, 3).map((proj) => (
@@ -78,9 +102,9 @@ export default function App() {
           ))}
         </div>
 
-        {/* Other Projects */}
+        {/* Other GitHub Projects */}
         <h2 className="text-2xl font-semibold mb-4">Other Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {projects.slice(3).map((proj) => (
             <a
               key={proj.id}
@@ -95,7 +119,36 @@ export default function App() {
             </a>
           ))}
         </div>
+
+        {/* WethinkCode Private Projects */}
+        <h2 className="text-2xl font-semibold mb-4">
+          WethinkCode Projects (Private)
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {privateProjects.map((proj) => (
+            <div
+              key={proj.id}
+              className="p-4 border rounded hover:shadow-lg transition bg-white dark:bg-gray-800"
+            >
+              <h3 className="text-lg font-bold mb-1">{proj.name}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">
+                {proj.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {proj.tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs dark:bg-indigo-800 dark:text-indigo-100"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   );
 }
+
