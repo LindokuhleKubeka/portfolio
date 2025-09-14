@@ -1,0 +1,45 @@
+# 🚀 Lindokuhle's DevOps & Software Engineering Portfolio
+Welcome to my portfolio! I'm a final-year Software Engineering student at WeThinkCode_ (graduating 2026) and a Junior DevOps Engineer with a Certified Kubernetes Administrator (CKA) credential. I specialize in Kubernetes, CI/CD, Java, Python, and cloud platforms (AWS, Azure). Explore my projects below.
+
+## 🛠 Projects
+| Project | Description | Tools | Link |
+|---------|-------------|-------|------|
+| CI/CD Pipeline | Automated deployment of a Flask app to Kubernetes | GitHub Actions, Docker, Kubernetes, Python | [ci-cd-flask](https://github.com/LindokuhleKubeka/ci-cd-flask) |
+| Helm Chart | Packaged Node.js app for Kubernetes deployment | Helm, Kubernetes, Node.js | [helm-nodejs](https://github.com/LindokuhleKubeka/helm-nodejs) |
+| Terraform Azure | Provisioned Azure VM with Terraform | Terraform, Azure | [terraform-azure-vm](https://github.com/LindokuhleKubeka/terraform-azure-vm) |
+| Shelf Sense | Python-based inventory management prototype for retail | Python, SQL | [shelf-sense](https://github.com/LindokuhleKubeka/shelf-sense) |
+| Student Tracker | Java app to manage student progress | Java, SQL, Spring Boot | [student-tracker](https://github.com/LindokuhleKubeka/student-tracker) |
+
+## 📜 Certifications
+- Certified Kubernetes Administrator (CKA) - Linux Foundation
+- Kubernetes and Cloud Native Essentials (LFS250)
+- Introduction to Kubernetes (LFS158)
+- Introduction to Cloud Infrastructure Technologies (LFS151)
+- Introduction to Linux (LFS101)
+- AWS Educate: Introduction to Cloud 101
+- Basics of Cloud Computing (Udemy)
+- Professional Certificate in Agile and Scrum (MTF Institute)
+- Introduction to Programming Using Python (Sololearn)
+
+## 🎓 Education
+- **Diploma in Software Engineering** – WeThinkCode_ (Expected 2026)
+  - Specializing in Java, Python, DevOps, and cloud-native technologies
+- **National Diploma in Retail Business Management** – Tshwane University of Technology (2019–2021, one module remaining)
+  - Focused on retail operations and supply chain management
+
+## 💼 Experience
+- **Java Developer Intern** – CodVeda (June 2025 – August 2025)
+  - Built Java applications with Spring Boot and Javalin, integrated RESTful APIs
+- **Merchandiser** – RTT (2021 – 2022)
+  - Managed stock levels and merchandising in retail
+
+## 📬 Connect
+- [LinkedIn](https://www.linkedin.com/in/lindokuhle-kubeka-355922220/)
+- Email: wonderboy5292@gmail.com
+- Phone: 069 500 0233
+- Location: Brakpan, South Africa
+- Open to opportunities in South Africa, UAE, and Netherlands
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9-blue)
+![Java](https://img.shields.io/badge/java-17-blue)
